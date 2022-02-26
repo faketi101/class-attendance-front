@@ -1,0 +1,31 @@
+.outline_none {
+  outline: none !important;
+  border: none !important;
+}
+.outline_none:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none;
+}
+.headinng {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.checked_false {
+  color: red !important;
+  font-weight: bold !important;
+}
+.checked_true {
+  color: green !important;
+  font-weight: bold !important;
+}
+.head_time {
+  font-size: 14px;
+  line-height: 2.1;
+  margin-left: 60px;
+}
+.input_none {
+  outline: none;
+  border: none;
+}

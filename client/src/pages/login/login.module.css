@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:500"); */
+:root {
+  --theme_color: #468bf0;
+  --theme_color_hover: #2980b9;
+  --valid_input: #27ae60;
+  --invaild_input: #c0392b;
+  --theme_icons: #333;
+  --theme_background: #fff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: var(--theme_background);
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.forms_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.signin_signup {
+  position: absolute;
+  top: 40%;
+  transform: translate(-40%, -40%);
+  left: 65%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+.sign_in_form .google_login_title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+form.sign_in_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.sign_in_form {
+  z-index: 2;
+}
+.forget_password {
+  color: var(--valid_input);
+  font-size: 12px;
+  transform: translateX(100%);
+}
+.title {
+  font-size: 1.5rem;
+  color: rgb(36, 25, 25);
+  margin-bottom: 15px;
+}
+.logo_login {
+  margin: 10px 0;
+  width: 75px;
+}
+.input_field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 45px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input_field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.input_field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+/* styles for on input filed is on focous */
+.input_field::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  transition: all 0.5s;
+}
+.input_field.focus::after {
+  background-color: var(--theme_color);
+  left: 0;
+  width: 100%;
+}
+.input_field.focus input {
+  color: var(--theme_color);
+}
+.input_field.focus i {
+  color: var(--theme_color);
+}
+/* invalid form */
+.input_field.invalid_field:after {
+  background-color: var(--invaild_input);
+  left: 0;
+  width: 100%;
+}
+.input_field.invalid_field input {
+  color: var(--invaild_input) !important;
+}
+.input_field.invalid_field i {
+  color: var(--invaild_input) !important;
+}
+/* valid  form */
+.input_field.valid_field::after {
+  background-color: var(--valid_input);
+  left: 0;
+  width: 100%;
+}
+
+.input_field.valid_field input {
+  color: var(--valid_input) !important;
+}
+.input_field.valid_field i {
+  color: var(--valid_input) !important;
+}
+
+/* validation error messages  */
+.validation_container {
+  max-width: 300px;
+  width: 100%;
+  background-color: #bec5c7;
+  border: 2px solid #2c3e5094;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.validation_container .message {
+  color: #2c3e50;
+  font-size: 11px;
+}
+.input_field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+.input_field input {
+  transition: all 0.3s;
+}
+
+.routeLinkBtn {
+  padding: 5px 10px;
+  color: var(--theme_color);
+  border: none;
+  outline: none;
+  border-radius: 49px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.routeLinkBtn:hover {
+  background-color: var(--theme_color);
+  color: #fff;
+}
+.btn {
+  width: 125px;
+  background-color: var(--theme_color);
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: var(--theme_color_hover);
+}
+.panels_container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.left_panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.panel .content {
+  color: #fff;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* ANIMATION */
+
+/* styles for google sing in button */
+.google_btn {
+  margin-top: 30px;
+  width: 180px;
+  height: 40px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.4s;
+}
+.google_btn:hover {
+  cursor: pointer;
+}
+.google_btn .google_icon_wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 38px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.google_btn .google_icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.google_btn .btn_text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+.google_btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.google_btn:active {
+  background: #1669f2;
+}
+
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin_signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin_signup {
+    left: 50%;
+  }
+
+  .panels_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .left_panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+}
+
+@media (max-width: 570px) {
+  .logo_login {
+    width: 40px;
+  }
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .input_field {
+    max-width: 300px;
+  }
+  .input_field input {
+    font-size: 14px;
+  }
+  .input_field i {
+    font-size: 14px;
+  }
+  .validation_container {
+    max-width: 300px;
+  }
+  .validation_container .message {
+    font-size: 12px;
+  }
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+}

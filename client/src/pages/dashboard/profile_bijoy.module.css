@@ -1,0 +1,119 @@
+.content {
+  position: relative;
+  max-width: 1170px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.profile_card_wrap {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../../assests/npsc.jpg);
+  z-index: 50;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(3px);
+  overflow: hidden;
+}
+
+.profile_card {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  z-index: 50;
+  background: #181818;
+  min-width: 335px;
+  transform: translate(-50%, 10%);
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px #1a1aff;
+}
+.card_header {
+  background: #181818;
+  padding: 60px 39px;
+}
+
+.pic {
+  display: inline-block;
+  padding: 8px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  background: #181818;
+  box-shadow: 1px 1px 12px #1a1aff;
+  /* background: linear-gradient(130deg, #74b9ff, #e66767); */
+  /* animation: animated-gradient 2s linear infinite; */
+}
+
+@keyframes animated-gradient {
+  25% {
+    background-position: left bottom;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.pic img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.profile_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px !important;
+  /* display: inline-block; */
+}
+.info_head {
+  text-align: left;
+  padding-right: 10px;
+}
+.info {
+  text-align: left;
+}
+.contact_btn {
+  display: inline-block;
+  padding: 12px 50px;
+  color: #1a1aff;
+  border: 2px solid #1a1aff;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+}
+
+.contact_btn:hover {
+  background: #1a1aff;
+  color: #f2f2f2;
+}
+
+.card_footer {
+  background: #1a1aff;
+  padding: 4px 10px;
+}

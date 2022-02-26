@@ -1,0 +1,115 @@
+.content {
+  position: relative;
+  max-width: 1170px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+/* .profile_card_wrap {
+  height: 100vh;
+  width: 100vw;
+ 
+  overflow: hidden;
+  overflow-x: hidden;
+} */
+
+.profile_card {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  z-index: 50;
+  background: #181818;
+  min-width: 290px;
+  transform: translate(-50%, 10%);
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px #00b8e6;
+  margin: 0;
+}
+
+.card_header {
+  background: #181818;
+  padding: 35px 10px;
+}
+
+.pic {
+  display: inline-block;
+  padding: 8px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  background: #181818;
+  box-shadow: 1px 1px 12px #00ccff;
+  overflow: hidden;
+  /* background: linear-gradient(130deg, #74b9ff, #e66767); */
+  /* animation: animated-gradient 2s linear infinite; */
+}
+
+@keyframes animated-gradient {
+  25% {
+    background-position: left bottom;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.pic img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+
+  text-align: center !important;
+}
+.name h4{
+  text-align: center;
+}
+.profile_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  /* display: inline-block; */
+}
+.info_head {
+  text-align: left;
+  padding-right: 10px;
+}
+.info {
+  text-align: left;
+}
+.contact_btn {
+  display: inline-block;
+  padding: 12px 50px;
+  color: #00ccff;
+  border: 2px solid #00ccff;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+}
+
+.contact_btn:hover {
+  background: #00b8e6;
+  color: #f2f2f2;
+}
+
+.card_footer {
+  background: #00b8e6;
+  padding: 4px 10px;
+}

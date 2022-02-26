@@ -1,0 +1,103 @@
+.loginbox{
+    width: 308px;
+    height: 460px;
+    background: #000;
+    color: #fff;
+    top: 56%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: 2px 2px 3px #00b8e6;
+    border-bottom: 3px solid #00b8e6;
+    border-radius: 5px;
+    transition:  all .5s ease;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    background: #00b8e6;
+    text-align: center;
+}
+.user_av{
+    font-size: 60px;
+    padding: 16px;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="password"]:focus{
+    border-bottom: 1px solid #00b8e6;
+
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #00b8e6;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    transition:  all .5s ease;
+
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+.not_matched{
+    border-bottom: 1px solid #ff2600 !important;
+    color: #ff2600 !important;
+
+}
+.matched{
+    color: #1eff00 !important;
+    border-bottom: 1px solid #1eff00 !important;
+}

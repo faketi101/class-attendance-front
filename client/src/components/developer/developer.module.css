@@ -1,0 +1,146 @@
+.dev_vard {
+  margin: 0;
+
+  pad: 100px 0px;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.dev_vard h1 {
+  text-align: center;
+  color: #1785eb;
+  font-size: 45px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+.our_team {
+  background: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  /* margin: 0px 56px; */
+  /* padding: 85px 68px; */
+  height: 400px;
+  width: 600px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.our_team:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 3px 8px #4e5052;
+}
+.our_team .pic {
+  display: inline-block;
+  width: 130px;
+  height: 135px;
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.our_team .pic::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background: #1785eb;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.2;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our_team:hover .pic::before {
+  height: 100%;
+}
+.our_team .pic::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #1785eb;
+  position: absolute;
+  bottom: 135px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.our_team .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+.our_team:hover .pic img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+.our_team .team_content {
+  margin-bottom: 30px;
+}
+.our_team .tittle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4e5052;
+  letter-spacing: 1;
+  margin: 10px 0;
+}
+.our_team .post {
+  display: block;
+  font-size: 15px;
+  color: #eb2f06;
+  font-weight: bold;
+}
+.our_team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #1785eb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+.our_team:hover .social {
+  bottom: 0;
+}
+.our_team .social li {
+  display: inline-block;
+}
+.our_team .social li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.our_team .social li a:hover {
+  color: #1785eb;
+  background: #f7f5ec;
+}
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+  .our_team {
+    width: 80%;
+    margin-top: 30px;
+  }
+}

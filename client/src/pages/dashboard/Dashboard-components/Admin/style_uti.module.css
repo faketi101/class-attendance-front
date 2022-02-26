@@ -1,0 +1,47 @@
+.form{
+    width: 600px;
+    margin: 0 auto;
+}
+.form p, .form_2 p{
+    font-size: 14px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.form_2{
+    width: 82%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-bottom: 3px solid #00b8e6;
+    box-shadow: 0px 0px 2px #00b8e6;
+    border-radius: 5px 0 5px 0;
+    background: #F3F4F6;
+    box-shadow: 3px 2px 7px #00b8e6;
+}
+
+.form input{
+    font-size: 14px;
+
+}
+.date_div{
+    margin-top: 15px;
+    display: flex;
+   }
+.cls_div{
+    margin-top: 15px;
+display: flex;
+    justify-content: space-between;
+}
+.st_id_div{
+    margin: 15px 0;
+    display: flex;
+}
+
+.input_1{
+    min-width: 162px;
+    outline: none;
+    min-height: 26px;
+
+}
+.button{
+    margin: 0 15px;
+}
